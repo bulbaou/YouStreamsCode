@@ -21,7 +21,7 @@ public class Main {
         // далее сравнение в цикле игнорируем т.к. без него не обойтись никак вообще, это основной цикл.
         // технически говоря такое сравнение тоже подлежит учету, но для простоты его игнорируют.
         for (int i = 2; i < array.length; i = i + 2) {
-            count++; //это увеличение count за уточнение того, на последнем ли мы элементе (if ниже)
+            count++; //это увеличение count за уточнение того, на последнем ли мы элементе (if ниже, 25 строка)
             if (i != array.length - 1) {
                 if (array[i + 1] <= min) {
                     min = array[i];
@@ -34,7 +34,7 @@ public class Main {
                     }
                     count = count + 2;//собственно два основных внутренних условия
                 }
-                count++;//это if в 30 строчке
+                count++;//это if в 26 строчке
             } else {
                 if (array[i] >= max) {
                     max = array[i];
@@ -54,4 +54,5 @@ public class Main {
         System.out.println("Сравнений: " + count);
         System.out.println("Цель: " + (3 * array.length / 2));
         System.out.println("Длина массива: " + array.length);
+
     }
